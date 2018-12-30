@@ -4,8 +4,9 @@
   "description": "herolo_cinema",
   "main": "index.js",
   "scripts": {
-    "prestart": "babel-node tools/startMessage.js",
-    "start": "npm-run-all --parallel open:src",
+    "prestart1": "babel-node tools/startMessage.js",
+    "start1": "npm-run-all --parallel open:src",
+    "statr": "node dist-server/server.js",
     "open:src": "babel-node tools/srcServer.js",
     "remove-dist": "node_modules/.bin/rimraf ./dist",
     "clean-dist": "npm run remove-dist && mkdir dist",

@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const compression = require('compression');
-const open = require('open');
 
 const port = process.env.PORT || 3000;
 
@@ -25,7 +24,5 @@ app.use('/*', express.static(path.join( __dirname, '../dist/index.html')));
 app.listen(port, function(err) {
     if (err) {
         console.log(err);
-    }else{
-        open(`http://localhost:${port}`);
     }
 });
