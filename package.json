@@ -6,7 +6,13 @@
   "scripts": {
     "prestart": "babel-node tools/startMessage.js",
     "start": "npm-run-all --parallel open:src",
-    "open:src": "babel-node tools/srcServer.js"
+    "open:src": "babel-node tools/srcServer.js",
+    "remove-dist": "node_modules/.bin/rimraf ./dist",
+    "clean-dist": "npm run remove-dist && mkdir dist",
+    "build:html": "babel-node tools/buildHtml.js",
+    "prebuildtest": "npm-run-all clean-dist build:html",
+    "buildtest": "babel-node tools/buildTest.js",
+    "run_build_server": "node dist-server/server.js"
   },
   "author": "“matan” <“matan.bardach@gmail.com”>",
   "license": "ISC",
@@ -38,6 +44,7 @@
     "mocha": "^2.4.5",
     "moment": "^2.17.1",
     "nyc": "^10.2.0",
+    "path": "^0.12.7",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-faux-dom": "^3.0.0",
