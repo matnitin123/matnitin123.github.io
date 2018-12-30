@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import * as SvgConst from './constSvgLocal';
 import _ from 'lodash';
 import './icon.less';
-import valeraIcon from './quest-logo-new.png';
 
 const icons = ({name, size, color, svgStyle, onClick, type, disable}) => {
     let sizeViewBox = '0 0 36 36';
