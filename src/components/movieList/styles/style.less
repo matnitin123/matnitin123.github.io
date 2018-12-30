@@ -1,0 +1,143 @@
+@movieListHeadlineHeight: 70px;
+@lineHeight: 40px;
+
+.my-row{
+  display: flex;
+  width: 100%;
+}
+
+.movie-component{
+  .movie-list{
+    .movie-list-headline{
+      padding-left: 10px;
+      padding-right: 10px; // this is fo the width of the overflow.
+      height: @movieListHeadlineHeight;
+      background-color: #00d9ff75;
+      .col-title{
+        width: 20%;
+      }
+      .col-year{
+        width: 10%;
+      }
+      .col-runtime{
+        width: 10%;
+      }
+      .col-genre{
+        width: 25%;
+      }
+      .col-director{
+        width: 20%;
+      }
+      .col-add-btn{
+        width: 100px;
+      }
+      .col-delete{
+        width: 5%;
+      }
+      .headline-text{
+        line-height: @movieListHeadlineHeight;
+      }
+      .add-button{
+        line-height: @movieListHeadlineHeight;
+      }
+    }
+    .movie-table-wrapper{
+      background-color: azure;
+      position: absolute;
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: ~"calc(100% - @{movieListHeadlineHeight})";
+      .movie-list-item{
+        line-height: 20px;
+        height: @lineHeight;
+        border: solid 1px #cccccc;
+        padding-left: 10px;
+        .col-title{
+          width: 20%;
+        }
+        .col-year{
+          width: 10%;
+        }
+        .col-runtime{
+          width: 10%;
+        }
+        .col-genre{
+          width: 25%;
+        }
+        .col-director{
+          width: 20%;
+        }
+        .col-edit-btn{
+          width: 100px;
+        }
+        .col-delete{
+          width: 5%;
+        }
+        div{
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .edit-button{
+          line-height: @lineHeight;
+        }
+      }
+      .movie-list-item:hover {
+        background-color: #c1b0b0;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.edit-movie-wrapper{
+  .left-side-edit{
+    width: 50%;
+  }
+  .right-side-edit{
+    width: 50%;
+  }
+}
+.edit-movie-column{
+    padding-left: 15px;
+}
+
+.form-input-filed{
+  &.genre-wrapper{
+    margin-bottom: 40px;
+  }
+  display: grid;
+  margin-top: 20px;
+  .genre-select-input{
+    cursor: pointer;
+    div{
+      input{
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  .edit-movie-error-text{
+    color: red;
+    font-size: 14px;
+  }
+
+}
+
+
+
+
+.genre-menu-box{
+  bottom: 80px;
+  width: 210px !important;
+  max-height: 150px;
+  .item-genre{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 160px;
+  }
+}

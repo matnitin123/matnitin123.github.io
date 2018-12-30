@@ -1,0 +1,87 @@
+@topDialog: 75;
+@heightDialog: 425;
+@heightDialogSpace: 60;
+@heightConfirmDialog: 300;
+@widthDialog: 550;
+@bodyDialog: @heightDialog - @topDialog;
+@bodyConfirmDialog: 300;
+
+
+.dialog-box{
+  padding: 0px !important;
+  overflow: hidden !important;
+  .dialog-top{
+    width: 100%;
+    height:  ~"calc(@{topDialog}px)";
+    border-bottom: solid 2px #cccccc;
+    padding: 0px;
+    margin: 0px !important;
+    .top-dialog-close-btn{
+      width: 10%;
+    }
+    .top-dialog-title{
+      width: 80%;
+      text-align: center;
+      line-height: ~"calc(@{topDialog}px)";
+    }
+    .top-dialog-right-side{
+      width: 10%;
+    }
+  }
+  .dialog-body{
+    height: ~"calc(@{bodyDialog}px)";
+    overflow: auto;
+  }
+}
+.dialog-confirm-box{
+  padding: 0px !important;
+  .dialog-body{
+    overflow: auto;
+  }
+}
+.dialog-section-left{
+  padding: 0px !important;
+  width: 100px;
+}
+.dialog-section-center{
+  text-align: center !important;
+  margin-top: 20px;
+}
+.dialog-section-right{
+  width: 100px;
+  text-align: right;
+  margin-top: 15px;
+  .change-user-password-loader {
+    margin-left: 45px;
+    margin-right: 45px;
+    border: 16px solid #3498db;
+    border-radius: 50%;
+    border-top: 16px solid #f3f3f3;
+    width: 10px;
+    height: 10px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+  }
+}
+
+.arrange-horizontally > * {
+  display: inline-block;
+  text-align: center;
+}
+.arrange-vertically > * {
+  display: block;
+}
+
+.dialog-num-progress {
+  margin-right: 20px;
+  color:#cccccc;
+  cursor: pointer;
+  &.active {
+    color: #575757
+  }
+}
+
+
+.confirmation-delete-body-wrapper{
+  margin: 20px;
+}

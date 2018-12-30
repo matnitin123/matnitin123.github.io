@@ -1,0 +1,8 @@
+.may-background(@a) when (lightness(@a) >= 70%) {
+  background-color: @a;
+  color: #3c3c3c;
+}
+.may-background(@a) when (lightness(@a) < 70%) {
+  background-color: @a;
+  color: #ffffff;
+}

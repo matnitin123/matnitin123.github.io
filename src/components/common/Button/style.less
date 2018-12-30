@@ -1,0 +1,122 @@
+@import "../../../styles/set-color-func.less";
+
+.button-behave{
+  &:hover{
+    opacity: 1;
+  }
+  &:active{
+    .may-background(#ffffff);
+    opacity: 1;
+  }
+}
+.button-behave-dark-back{
+  opacity: 1;
+  color: #3c3c3c;
+  &:hover{
+    opacity: 0.7;
+  }
+  &:active{
+    border: solid 1px #ffffff;
+    opacity: 1;
+    background-color: inherit;
+  }
+}
+.button-primary{
+  position: relative;
+  min-width: 80px;
+  margin: auto;
+  padding-right: 5px;
+  padding-left: 5px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 4px;
+  background-color: #cccccc;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  &.disable-button{
+    .may-background(#cccccc);
+    cursor: not-allowed;
+  }
+  &.alert-button{
+    .may-background(#d75050);
+    &:hover{
+      background-color: #e79696;
+    }
+    &:active{
+      background-color: #963737;
+    }
+  }
+  &.try-button{
+    .may-background(#0f2947);
+    border: solid 1px #0f2947;
+    .button-behave
+  }
+  &.try-button1{
+    .may-background(#5ca2f8);
+    border: solid 1px #5ca2f8;
+    .button-behave
+  }
+  &.try-button2{
+    .may-background(#d75050);
+    border: solid 1px #d75050;
+    .button-behave
+  }
+  &.try-button3{
+    .may-background(#f2f2f2);
+    border: solid 1px #f2f2f2;
+    .button-behave
+  }
+  &.try-button-dark-back{
+    .may-background(#f2f2f2);
+    border: solid 1px #f2f2f2;
+    .button-behave-dark-back
+  }
+}
+
+.button_simulate_loader{
+  width: 110px;
+  height: 40px;
+  position: relative;
+  margin: auto;
+  .loader {
+    position: relative;
+    margin: auto;
+    border: 16px solid #3498db;
+    border-radius: 50%;
+    border-top: 16px solid #f3f3f3;
+    width: 10px;
+    height: 10px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+  }
+}
+
+//.button-primary:after {
+//  content: "";
+//  background-color: #cccccc;
+//  position: absolute;
+//  width: 110px;
+//  height: 40px;
+//  left: 0px;
+//  opacity: 0;
+//  transition: all 0.8s
+//}
+//
+//.button-primary:active:after {
+//  padding: 0;
+//  margin: 0;
+//  opacity: 1;
+//  transition: 0s
+//}
+input{
+  border:none;
+  font-size: inherit;
+}
+input:focus {
+  outline: #cccccc auto 0px;
+}
+button:focus {
+  outline: #cccccc auto 0px;
+}

@@ -1,0 +1,1 @@
+console.log("START REACT APP FOR HEROLO CINEMA!");
