@@ -8,7 +8,7 @@ let lessLoaders = cssLoaders.slice(0);
 lessLoaders.push('less-loader');
 
 const GLOBALS = {
-    'process.env': { NODE_ENV: JSON.stringify('test') }
+    'process.env': { NODE_ENV: JSON.stringify('production') }
 };
 
 export default {
