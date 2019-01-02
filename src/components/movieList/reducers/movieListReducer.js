@@ -24,7 +24,8 @@ export default function movieListReducer(state = initializeState, action) {
             });
 
             return Object.assign({}, state, {
-                list: listWithId
+                list: listWithId,
+                lastId
             });
         }
         case types.CHANGE_MOVIE_FROM_LIST: {
@@ -47,7 +48,6 @@ export default function movieListReducer(state = initializeState, action) {
         }
         case types.ADD_NEW_MOVIE_TO_LIST: {
             const list = _.cloneDeep(state.list);
-            debugger;
             const newMovie = {
                 "title": action.movie.title,
                 "year": action.movie.year,
