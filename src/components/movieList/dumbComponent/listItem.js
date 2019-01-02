@@ -27,13 +27,24 @@ const listItem = ({title, year, runTime, genre, director, editClick, id, deleteC
         marginTop: '10px'
     };
 
+    const titleCase = (str) =>{
+        let splitStr = str.toLowerCase().split(' ');
+        for (let i = 0; i < splitStr.length; i++) {
+            // You do not need to check if i is larger than splitStr length, as your for does that for you
+            // Assign it back to the array
+            splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+        }
+        // Directly return the joined string
+        return splitStr.join(' ');
+    };
+
     const clickFunc  = () => {
         editClick(id);
     }
 
     const sizeRunTime = _.size(""+runTime+"");
     const show = {
-        title,
+        title: titleCase(title),
         year,
         genre,
         director
